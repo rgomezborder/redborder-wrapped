@@ -44,3 +44,17 @@ With the virtual environment activated, run:
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+---
+
+### 4️⃣ Create a `.env` File
+
+Create a `.env` file in the project root to store your Redmine API key:
+
+```sh
+echo "REDMINE_API_KEY=your_api_key_here" > .env
+```
+
+Replace `your_api_key_here` with your actual Redmine API key.
+
+> **Note:** Never commit your `.env` file to version control.
