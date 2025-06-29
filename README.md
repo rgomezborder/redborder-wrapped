@@ -1,5 +1,7 @@
 # Redborder Wrapped
 
+Redborder Wrapped is a Python tool designed to automate the extraction and reporting of issues from a Product NG project.
+
 ## 🧰 Installation Guide (Python 3.12)
 
 Set up the project easily on **macOS, Linux, or Windows** using Python 3.12.
@@ -29,7 +31,7 @@ source venv/bin/activate
 
 **Windows (Command Prompt):**
 
-```bat
+```sh
 python -m venv venv
 venv\Scripts\activate
 ```
@@ -47,7 +49,9 @@ pip install -r requirements.txt
 
 ---
 
-### 4️⃣ Create a `.env` File
+## 🔑 Set up Redmine API
+
+### 1️⃣ Create a `.env` File
 
 Create a `.env` file in the project root to store your Redmine API key:
 
@@ -58,3 +62,16 @@ echo "REDMINE_API_KEY=your_api_key_here" > .env
 Replace `your_api_key_here` with your actual Redmine API key.
 
 > **Note:** Never commit your `.env` file to version control.
+
+---
+
+## 📅 Set the Date Range for Issue Filtering
+
+Specify the start and end dates to filter issues by their creation date. Update the values as needed:
+
+```python
+START_TIME = datetime.strptime('2025-01-01', '%Y-%m-%d')
+END_TIME = datetime.strptime('2025-07-18', '%Y-%m-%d')
+```
+
+> **Tip:** Adjust the dates to match your desired reporting period.
